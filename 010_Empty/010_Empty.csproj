@@ -34,12 +34,15 @@
   <ItemGroup>
     <Reference Include="Atys.PowerDvc.Contracts">
       <HintPath>..\Dependencies\Atys.PowerDvc.Contracts.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Atys.PowerDvc.Foundation">
       <HintPath>..\Dependencies\Atys.PowerDvc.Foundation.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Atys.PowerSuite.Definitions">
       <HintPath>..\Dependencies\Atys.PowerSuite.Definitions.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
