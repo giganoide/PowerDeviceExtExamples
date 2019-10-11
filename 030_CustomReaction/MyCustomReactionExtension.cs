@@ -74,7 +74,7 @@ namespace TeamSystem.Customizations
         void ServiceManager_SynchronizedCustomReactionRaised(object sender, SynchronizedCustomReactionEventArgs e)
         {
             const string customReactionDisplayName = @"CUSTOM_SYNC";
-            const string strobeFqn = @"{S7_TRAFITAL}{COMBINATA-3}{DB51.DBD66}"; //TODO
+            const string strobeFqn = @"{OPCV1}{TESTOPC}{numeric.random.int32}"; //TODO
 
             if (e.Reaction.Action.DisplayName != customReactionDisplayName
                || e.Reaction.Token.FullyQualifiedName != strobeFqn)

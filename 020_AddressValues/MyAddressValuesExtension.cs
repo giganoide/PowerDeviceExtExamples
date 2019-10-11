@@ -70,7 +70,7 @@ namespace TeamSystem.Customizations
 
         private void ServiceManager_InitializationCompleted(object sender, EventArgs e)
         {
-            const string addressFqn = @"{MODBUS}{RAMAC}{H1098}"; //TODO
+            const string addressFqn = @"{OPCV1}{TESTOPC}{numeric.random.int32}";
 
             var tokenResolver = this._ServiceManager.DriversContextRepository.TokenResolver;
 
@@ -216,11 +216,11 @@ namespace TeamSystem.Customizations
         private void WriteWatchDogForMachine()
         {
             const int maxValue = 32000;
-            const string watchDog_C23_Fqn = @"{MODBUS}{RAMAC}{H1098}"; //TODO
+            const string watchDogFqn = @"{OPCV1}{TESTOPC}{storage.numeric.reg01}"; //TODO
 
             var tokenResolver = this._ServiceManager.DriversContextRepository.TokenResolver;
 
-            var watchDogToken = (ResolvedToken)tokenResolver.Resolve(watchDog_C23_Fqn);
+            var watchDogToken = (ResolvedToken)tokenResolver.Resolve(watchDogFqn);
             if (watchDogToken == null || !watchDogToken.IsSolved)
             {
                 this._ServiceManager.AppendMessageToLog(MessageLevel.Warning, LOGGERSOURCE,
