@@ -216,7 +216,7 @@ namespace TeamSystem.Customizations
         private void WriteWatchDogForMachine()
         {
             const int maxValue = 32000;
-            const string watchDogFqn = @"{OPCV1}{TESTOPC}{storage.numeric.reg01}"; //TODO
+            const string watchDogFqn = @"{OPCV1}{TESTOPC}{storage.numeric.reg01}";
 
             var tokenResolver = this._ServiceManager.DriversContextRepository.TokenResolver;
 
